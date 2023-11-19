@@ -1,0 +1,1258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Times, serif;
+  scroll-behavior: smooth;
+}
+
+/* ------global tags-------- */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 650;
+  color: rgb(35, 35, 80);
+}
+span {
+  font-size: 1.1rem;
+  color: #757373;
+}
+h6 {
+  font-size: 1.1rem;
+  color: rgb(25, 25, 50);
+}
+
+/* -----------navigation-------- */
+nav {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 7vw;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgb(0, 0, 0.02);
+}
+nav img {
+  width: 70px;
+  height: 65px;
+  cursor: pointer;
+}
+.navigation{
+  display: flex;
+}
+#menuBtn{
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+#closeBtn{
+  display: none;
+}
+.navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: center;
+  list-style: none;
+}
+.navigation ul li {
+  margin-left: 30px;
+}
+.navigation ul li a {
+  text-decoration: none;
+  color: #ff0000;
+  font-size: 20px;
+  font-weight: 550;
+  transition: 0.3s ease;
+}
+.navigation ul li a.active{
+  color: #101c32;
+}
+.navigation ul li a:hover {
+  color: #3dd6d0;
+}
+
+/* -------home------ */
+#home {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
+    url(Images/schoolheader.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 115vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 45px;
+}
+#home h2 {
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 2.1rem;
+}
+#home p {
+  width: 55%;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 25px;
+}
+
+/* ------buttons------- */
+.btn {
+  margin-top: 30px;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.btn-11 {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  background: rgb(251, 33, 117);
+  background: linear-gradient(
+    0deg,
+    rgba(251, 33, 117, 1) 0%,
+    rgba(234, 76, 137, 1) 100%
+  );
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  line-height: 40px;
+}
+
+.btn-11:hover {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.btn-11:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.btn-11:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes shiny-btn1 {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* -------features-------- */
+#features {
+  padding: 5vw 7vw 0 7vw;
+  text-align: center;
+}
+.miniFeatures {
+  background-color: #EAFDF8;
+  text-align: start;
+  padding: 20px;
+  border-radius: 5px;
+}
+.miniFeatures i {
+  font-size: 2.3rem;
+  color: #2e2e3a;
+}
+.miniFeatures h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #2e2e3a;
+  padding: 13px 0 8px 0;
+}
+.miniFeatures p {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #2e2e3a;
+}
+#features .features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/* ========our courses======== */
+#course {
+  padding: 7vw 7vw 0 7vw;
+  text-align: center;
+}
+
+#course .mainCourse {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#course .courses {
+  text-align: start;
+  background-color: #EAFDF8;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+}
+
+#course .courses img {
+  width: 100%;
+  height: 55%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 7px 7px 0 0;
+}
+#course .courses .details {
+  padding: 15px 15px 0 15px;
+}
+#course .courses .details i {
+  color: #ff0000;
+  font-size: 0.8rem;
+}
+#course .courses .cost {
+  background-color: #8c001a;
+  color: #fff;
+  line-height: 60px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  bottom: 120px;
+}
+
+
+/* ------------registration -------- */
+#registration{
+    padding: 6vw 8vw 6vw 8vw;
+    background-image: linear-gradient(rgba(99,112,168,0.5),rgba(81,91,233,0.5)), url("Images/signup.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+#registration .reminder{
+    color: #FFF; 
+    align-self: center;
+}
+#registration .reminder h1{
+    color: #FFF; 
+}
+#registration .reminder .time{
+display: flex;
+margin-top: 40px;
+}
+#registration .reminder .time .date{
+    text-align: center;
+    padding: 15px 35px;
+    background: #ffffff40;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 30px 0 #1f268860;
+    border-radius: 10px;
+    border: 1.5px solid #ffffff2e ;
+    margin: 0 5px 10px 5px;
+    font-size: 1.1rem;
+    font-weight: 650;
+}
+
+/* ------reg form------ */
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #ffffff2e ;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    margin-left: 150px;
+  }
+  
+  .title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .message, .signin {
+    /* color: rgba(88, 87, 87, 0.822); */
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: royalblue;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color: green;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+  
+  .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+/* ===-----our experts------- */
+#teachers{
+    padding: 7vw 7vw 0 7vw;
+    text-align: center;
+}
+#teachers .experts{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 15px;
+}
+#teachers .experts .profile{
+    background-color: #CDD7D6;
+    padding: 30px 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+#teachers .experts .profile img{
+border-radius: 50%;
+border: 1.5px solid #9197AE;
+margin-bottom: 25px;
+width: 185px;
+height: 180px;
+}
+.proLinks{
+    margin-top: 10px;
+}
+.proLinks i{
+    padding: 10px 15px;
+    border: 1px solid #151564;
+    cursor: pointer;
+    transition: 0.3 ease;
+}
+.proLinks i:hover{
+    padding: 10px 15px;
+    background: #151564;
+    color: #fff;
+    border: 1px solid #151564;
+    cursor: pointer;
+}
+
+
+/* =-------footer------ */
+footer {
+    list-style: none;
+    padding: 7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background: #101c32;
+    margin-top: 25px;
+}
+.footCol{
+    padding-bottom: 15px;
+}
+footer h3{
+    color: #F1F0F5 ;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.4 ease;
+}
+footer li:hover{
+    color: #F1F0F5;
+}
+footer p{
+    color: #7b838a;
+}
+footer .subscribe{
+    margin-top: 15px;
+}
+footer input{
+    width: 220px;
+    padding: 15px 13px;
+    background: #334f6c;
+    outline: none;
+    color: #fff;
+    border: none;
+}
+
+/* copyright------ */
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+footer .copyright p{
+    color: #fff;
+}
+/* -------copyright buttons */
+footer .copyright .proLinks i{
+    background-color: #5f7185;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+footer .copyright .proLinks i:hover{
+    background-color:#fb2175;
+    color: #2c2c2c;
+}
+
+
+/* ----------------------------------media queries---------------------------- */
+@media (max-width: 768px) {
+nav{
+    padding: 15px 20px;
+}
+#closeBtn{
+  display: initial;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 25px 0 18px 18px;
+}
+#menuBtn{
+  display: initial;
+}
+nav .navigation ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  right: -220px;
+  width: 200px;
+  background: rgb(17, 20, 104, 0.45);
+  backdrop-filter: blur(4.5px);
+  border: 1px solid #ffffff29;
+  height: 100vh;
+  transition: 0.3s ease-in-out;
+}
+nav .navigation ul.active{
+  right: 0;
+}
+nav .navigation ul li{
+  padding: 20px 0 20px 40px;
+  margin-left: 0;
+}
+nav .navigation ul li a{
+  color: #fff;
+}
+#home{
+  padding-top: 0;
+}
+#home p{
+  width: 85%;
+}
+#features{
+  padding: 7vw 3.5vw 0 3.5vw;
+}
+#course{
+  padding: 7vw 3.5vw 0 3.5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3.5vw; 
+}
+#course .courseHeader {
+  grid-column: span 2; 
+}
+#registration{
+  margin-top: 7vw;
+  padding: 6vw 4vw 6vw 4vw;
+}
+#registration .reminder .time{
+ display: inline;
+}
+}
+
+/* -------sm screens----- */
+@media (max-width: 476px) {
+
+  #registration{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #registration .reminder .time{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   margin-top: 25px;
+   margin-bottom: 20px;
+  }
+  .form {
+    margin-left: 0;
+  }
+
+  #course {
+    padding: 3.5vw;
+    display: block; 
+    text-align: center;
+  }
+
+  .course-header {
+    grid-column: initial;
+  }
+
+  .courses {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center; 
+  }
+
+}
+
+  /* /-------------------------------------ABOUT---------------------------------   */
+  #about {
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
+      url(Images/schoolheader.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 45px;
+  }
+#about h2{
+  color: #fff;
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+}
+
+#aboutcontainer{
+  display: flex;
+  align-items: center;
+  padding: 7vw 7vw 1.5vw 7vw;
+}
+#aboutcontainer .aboutImg{
+  width: 60%;
+  padding-right: 50px;
+}
+#aboutcontainer .aboutImg img{
+  width: 100%;
+}
+#aboutcontainer .aboutText{
+  width: 40%;
+}
+#aboutcontainer .aboutText h2{
+  color: #334f6c;
+  padding-bottom: 15px;
+}
+#aboutcontainer .aboutText p{
+  color: #7b838a;
+  font-weight: 300;
+}
+#aboutcontainer .aboutFea{
+  display: flex;
+  align-items: flex-start;
+  padding-top: 25px;
+}
+#aboutcontainer .aboutFea img{
+ padding-right: 20px;
+ width: 70px;
+ height: 50px;
+}
+#aboutcontainer .aboutFea .aboutFeaText h5{
+font-size: 18px;
+color: #000;
+}
+
+
+/* --------sponsor------ */
+#sponsor{
+text-align: center;
+  padding: 7vw ;
+}
+#sponsor .sponsorImg{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sponsor .sponsorImg img{
+  height: 100px;
+}
+
+/* ---------responsive about------ */
+@media (max-width: 768px){
+#aboutcontainer{
+ padding: 7vw 4vw 2vw 4vw; 
+}
+#aboutcontainer .aboutImg{
+  padding-right: 25px;
+}
+#sponsor .sponsorImg img{
+  width: 100px;
+  height: auto;
+}
+}
+
+@media (max-width: 476px){
+  #aboutcontainer{
+flex-direction: column-reverse;
+  }
+
+  #aboutcontainer .aboutImg{
+    width: 100%;
+    padding: 0;
+  }
+  #aboutcontainer .aboutText{
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  #sponsor .sponsorImg img{
+    width: 60px;
+    height: auto;
+  }
+  
+}
+
+/* ---------blog ---------blog----------blog---------blog-------- */
+#blogHeader{
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
+    url(Images/schoolbg.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 45px;
+}
+#blogHeader h2 {
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 2.1rem;
+}
+#blog{ 
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+padding: 8vw;
+}
+#blog .blogs{
+width: 60%;
+}
+#blog .blogs img{
+width: 100%;
+border-radius: 50px;
+}
+#blog .blogs .post h3{
+color: #29303b;
+padding: 15px 0 10px 0;
+}
+#blog .blogs .post{
+padding-bottom: 50px;
+}
+#blog .blogs .post p{
+color: #757373;
+padding-bottom: 20px;
+}
+#blog .blogs .post a{
+text-decoration: none;
+font-size: .9rem;
+padding: 15px 35px;
+background: rgb(4, 4, 173);
+color: #fff;
+border-radius: 5px;
+font-weight: 600;
+}
+
+#blog .categories{
+width: 35%;
+}
+#blog .categories h2{
+padding-bottom: 10px;
+}
+#blog .categories a{
+text-decoration: none;
+font-weight: 600;
+color: #757373;
+line-height: 50px;
+}
+
+#blog .blogpost{
+width: 60%;
+margin: 0 auto;
+}
+#blog .blogpost p{
+text-align: justify;
+margin-bottom: 50px !important;
+}
+
+
+/* ---------responsiveness------ */
+@media (max-width: 768px){
+#blog{
+  flex-direction: column;
+  padding: 8vw 4vw;
+}
+#blog .blogs{
+  width: 100%;
+}
+#blog .categories{
+  width: 100%;
+  padding-bottom: 30px;
+}
+#blog .blogpost{
+  width: 100%;
+  margin-top: 60px;
+}
+#blog .blogpost img{
+  width: 100%;
+  height: 50vh;
+object-fit: cover;
+border-radius: 30px;
+}
+}
+
+@media (max-width: 476px){
+#blog{
+  flex-direction: column;
+}
+#blog .blogs{
+  width: 100%;
+}
+#blog .categories{
+  width: 100%;
+  padding-bottom: 20px;
+}
+#blog .blogpost{
+  width: 100%;
+  margin-top: 90px;
+}
+}
+
+
+
+/* -------courses page-------------courses page------ */
+#courses {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.3)),
+    url(Images/staffs.jpg);
+    background-size: cover;
+    background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 45px;
+}
+#courses h2 {
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 2.1rem;
+}
+
+/* ---------course pages-------- */
+#coursepage {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8vw;
+}
+#coursepage .overveiw{
+  width: 70%;
+}
+#coursepage .courseImg{
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#coursepage .overveiw .courseHead{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#coursepage .overveiw .courseHead .courseName{
+  width: 70%;
+}
+#coursepage .overveiw .courseHead .courseName h2{
+  color: #29303b;
+}
+#coursepage .overveiw .courseHead .courseName .star{
+  margin: 6px 0;
+}
+#coursepage .overveiw .courseHead .courseName .star i{
+  color: #fdc938;
+  font-size: .9rem;
+}
+#coursepage .overveiw .courseHead .courseName p{
+  font-size: 15px;
+}
+.instructor h5{
+  font-size: 25px;
+}
+.instructor hr{
+  height: 1px;
+  background-color: gray;
+  margin: 30px 0 10px 0;
+}
+.i-details {
+  display: flex;
+  align-items: center;
+}
+.ipic {
+  max-width: 100px; 
+  border-radius: 50%; 
+  margin: 15px 10px 15px 5px; 
+}
+.enroll {
+  width: 300px;
+  padding: 0 30px 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 40px 0 #d1d1d1;
+}
+.enroll h3{
+  padding-bottom: 10px;
+}
+.enroll p{
+  font-size: 15px;
+  color: #64626e;
+  margin: 15px 0 ;
+}
+.enroll i img{
+ color: #5838fc; 
+ font-weight: 500;
+ margin-right: 15px;
+ width: 20px;
+ height: 20px;
+ line-height: 15px;
+text-align: center;
+}
+.enroll .customm-btn{
+text-align: center;}
+
+.customm-btn {
+  margin-left: 50px;
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-1 {
+  background: rgb(6,14,131);
+  background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+  border: none;
+}
+.btn-1:hover {
+   background: rgb(0,3,255);
+background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+}
+#coursepage .overveiw .ipic{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+#coursepage .overveiw .courseHead span{
+  padding: 16px 20px;
+  border-radius: 5px;
+  color: #5838fc;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: rgba(88, 56, 252, 0.1);
+}
+.para1 ul{
+  padding: 0;
+  list-style: none;
+}
+.para1 ul{
+  padding: 10px;
+  margin-bottom: 2px;
+  margin-top: 5px;
+}
+/* --------------------responsivenes------------- */
+@media (max-width: 768px){
+#coursepage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8vw 4vw;
+}
+#coursepage .overveiw{
+  width: 100%;
+}
+#coursepage .courseImg{
+  height: 100%;
+  width: 100%;
+}
+.enroll{
+  margin-top: 30px;
+}
+}
+
+@media (max-width: 476px){
+  #coursepage .overveiw .courseHead .courseName{
+      width: 50%;
+    }
+  #coursepage .overveiw .courseHead .courseName h2{
+      font-size: 20px;
+  }
+  #coursepage .overveiw .courseHead .courseName span{
+      font-size: 20px;
+  }
+    #courses h2 {
+      letter-spacing: 1px;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    #courses {
+      height: 70vh;
+    }
+    .enroll{
+      width: 100%;
+    }
+}
+
+/* ------------contact us page-------- */
+.contact {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
+    url(Images/aboutBg.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 45px;
+}
+.contact h2 {
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 2.1rem;
+}
+#contact{
+padding: 8vw;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+#contact .getin{
+  width: 350px;
+}
+#contact .getin h2{
+  color: #2c234d;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: .8;
+  margin-bottom: 15px;
+}
+#contact .getin p{
+  color: #686875;
+  line-height: 25px;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e4ed;
+}
+#contact .getin h3{
+  color: #2c234d;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+.getinDetails div{
+display: flex;
+}
+.getinDetails i img{
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+.getinDetails div .get{
+  font-size: 15px;
+  line-height: 20px;
+  color: #5838fc;
+  margin-right: 20px;
+}
+#contact .getinDetails div p{
+  font-size: 15px;
+  border-bottom: none;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+#contact .getinDetails .proLinks i{
+margin-right: 10px;
+}
+#contact .formc{
+  width: 60%;
+  /* background-color: #CDD7D6; */
+  background-color: rgba(205, 215, 214, 0.4);
+  padding: 40px;
+  border-radius: 10px;
+}
+#contact .formc h4{
+  font-size: 25px;
+  color: #2c234d;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+#contact .formc p{
+  color: #686875;
+  line-height: 25px;
+  padding-bottom: 25px;
+}
+#contact .formc .Formrow{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#contact .formc .Formrow input{
+  width: 48%;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 3px;
+  border: none;
+  background-color: #fff;
+  color: #7e7c87;
+  outline: none;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+}
+#contact .formc .formColumn textarea,
+#contact .formc .formColumn input{
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 3px;
+  border: none;
+  background-color: #fff;
+  color: #7e7c87;
+  outline: none;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+}
+#contact .formc button{
+  font-size: .9rem;
+  padding: 15px 25px;
+  background-color: #151564;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.map{
+  width: 100%;
+  height: 50vw;
+  margin-bottom: 5vw;
+}
+.map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px){
+#contact{
+padding: 8vw 4vw;
+}
+#contact .getin{
+width: 200px;
+}
+}
+@media (max-width: 476px){
+#contact{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+#contact .getin{
+width: 100%;
+margin-bottom: 30px;
+}
+#contact .formc{
+width: 100%;
+padding: 40px 30px;
+}
+#contact .formc .Formrow{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+width: 100%;
+}
+#contact .formc .Formrow input{
+width: 100%;
+}
+#contact .getinDetails .proLinks {
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+  }
+}
